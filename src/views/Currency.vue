@@ -27,7 +27,7 @@
 									<el-table-column prop="amount" label="数量" width="300"/>
 									<el-table-column prop="operation" label="Ops" width="200" align="left">
 										<template slot-scope="scope">
-											<el-button size="mini" type="danger" @click="deleteCurrency(scope.ro.id)">×</el-button>
+											<el-button size="mini" type="danger" @click="deleteCurrency(scope.row.id)">×</el-button>
 										</template>
 									</el-table-column>
 								</el-table>
@@ -60,6 +60,10 @@
 			},
 			addCurrency: async function() {
 				await axios.post('http://localhost:8080/', this.request)
+				await this.refresh()
+			},
+			deleteCurrency: async function (id) {
+				await axios.delete('http://localhost:8080/' + id)
 				await this.refresh()
 			},
 		}
