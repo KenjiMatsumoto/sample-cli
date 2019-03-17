@@ -25,6 +25,16 @@ export default new Router({
 		path: '/currency',
 		name: 'currency',
 		component: () => import('./views/Currency.vue')
-	}
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: () => import('./views/Signup.vue')
+  },
+  {
+    path: '/signin',
+    name: 'signin',
+    component: () => import('./views/Signin.vue')
+  }
   ]
 })
