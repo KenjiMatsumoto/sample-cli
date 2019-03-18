@@ -29,12 +29,12 @@ export default new Router({
   {
     path: '/signup',
     name: 'signup',
-    component: () => import('./views/Signup.vue')
+    component: () => import('./views/signup.vue')
   },
   {
     path: '/signin',
     name: 'signin',
-    component: () => import('./views/Signin.vue')
+    component: () => import('./views/signin.vue')
   }
   ]
 })
