@@ -6,13 +6,13 @@
 import firebase from 'firebase'
 
 export default {
-  name: 'SubHeader',
-  methods: {
-	  signout: function () {
-		  firebase.auth().signout().then(() => {
-			  this.$router.push('/signin')
-		  })
-	  }
+	name: 'SubHeader',
+	methods: {
+		signout: function () {
+				firebase.auth().signOut().then(() => {
+				this.$router.push('/signin')
+			})
+		}
 	}
 }
 </script>

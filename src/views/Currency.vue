@@ -1,5 +1,6 @@
 <template>
     <el-row>
+				<sub-header/>
 				<el-col :span="24">
 						<el-card class="box-card box-card-wrapper">
 							<div slot="header">
@@ -52,9 +53,12 @@
 </template>
 
 <script>
-  import axios from 'axios'
+	import axios from 'axios'
+	import SubHeader from '../components/SubHeader'
+
   export default {
-	name: "Currency",
+		name: "Currency",
+		components: {SubHeader},
 		data () {
 			return {
 				request: {
